@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day 03 - JS Dasar, DOM & Event</title>
   </head>
-  <body style="background-color: #034f84">
+  <body style="background-color: #e7e7e7">
     <div style="text-align: center">
       <h1 id="judul">Learning JS</h1>
       <p class="desc">ini bagian deskripsi</p>
@@ -13,7 +13,7 @@
     <br />
 
     <div style="text-align: center">
-      <input type="text" id="nama" placeholder="Rivaldi" />
+      <input type="text" id="name" placeholder="Nama" />
       <p id="output"></p>
     </div>
 
@@ -22,6 +22,34 @@
       <p id="msg"></p>
     </div>
     <br />
+
+    <hr />
+
+    <div style="text-align: center">
+      <h2 style>1. Tombol Tambah Angka</h2>
+      <p>Angka: <span id="angka">0</span></p>
+      <button id="btnTambah">Tambah Angka</button>
+    </div>
+    <br />
+
+    <hr />
+
+    <div style="text-align: center">
+      <h2>2. Form Login Sederhana</h2>
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="username" /><br /><br />
+        <input type="password" id="password" placeholder="password" /><br /><br />
+        <button type="submit">Login</button>
+      </form>
+      <p id="loginMsg"></p>
+    </div>
+
+    <hr />
+    <div style="text-align: center">
+      <h2>3. Hitung Jumlah Karakter</h2>
+      <input type="text" id="teks" placeholder="Ketik sesuatu..." />
+      <p>Jumlah karakter: <span id="charCount">0</span></p>
+    </div>
 
     <script src="script.js"></script>
   </body>
