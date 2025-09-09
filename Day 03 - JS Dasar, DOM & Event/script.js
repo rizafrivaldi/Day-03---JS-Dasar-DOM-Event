@@ -38,12 +38,10 @@ function sapa(nama) {
 }
 console.log(sapa("Rivaldi")); */
 
-alert("JS berhasil berjalan");
-
 // DOM - (Document Object Model)
 let judul = document.getElementById("judul");
 judul.textcontent = "Halo DOM";
-judul.style.color = "white";
+judul.style.color = "black";
 
 let desc = document.querySelector(".desc");
 desc.style.fontWeight = "bold";
@@ -57,14 +55,48 @@ btn.addEventListener("click", function () {
   msg.style.color = "green";
 });
 
-let namaInput = document.getElementById("nama");
+let nameInput = document.getElementById("name");
 let output = document.getElementById("output");
 
-namaInput.addEventListener("input", function () {
-  output.textContent = "Halo, " + namaInput.value;
+nameInput.addEventListener("input", function () {
+  output.textContent = "Halo, " + nameInput.value;
 });
 
 /* Latihan Gabungan (JS Dasar + DOM + Event)
 Buat tombol “Tambah Angka” → setiap diklik, angka di layar bertambah 1.
 Buat form login sederhana → jika username/password kosong, tampilkan pesan error dengan warna merah.
 Buat input teks → ketika user mengetik, hitung jumlah karakter yang sudah dimasukkan. */
+
+let angka = 0;
+const angkaSpan = document.getElementById("angka");
+const btnTambah = document.getElementById("btnTambah");
+
+btnTambah.addEventListener("click", function () {
+  angka++;
+  angkaSpan.textContent = angka;
+});
+
+const loginForm = document.getElementById("loginForm");
+const loginMsg = document.getElementById("loginMsg");
+
+loginForm.addEventListener("submit", function (e) {
+  e.preventDefault(); //cegah reload halaman
+
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
+
+  if (username === "" || password === "") {
+    loginMsg.textContent = "Username dan pasword tidak boleh kosong!";
+    loginMsg.style.color = "red";
+  } else {
+    loginMsg.textContent = "Login berhasil!";
+    loginMsg.style.color = "green";
+  }
+});
+
+const teksInput = document.getElementById("teks");
+const charCount = document.getElementById("charCount");
+
+teksInput.addEventListener("input", function () {
+  charCount.textContent = teksInput.value.length;
+});
